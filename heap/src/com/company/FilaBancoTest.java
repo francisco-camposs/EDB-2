@@ -33,6 +33,9 @@ public class FilaBancoTest {
         assertSame(people3, fila.peek());
         assertSame(people2, fila.peek());
 
+        people2.setIdade(67);
+        assertSame(people2, fila.peek());
+
         assertNull(fila.peek());
 
 
