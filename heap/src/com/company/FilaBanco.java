@@ -1,4 +1,6 @@
-package br.com.francisco;
+package com.company;
+import com.company.Person;
+
 import java.util.Arrays;
 
 public class FilaBanco {
@@ -90,7 +92,7 @@ public class FilaBanco {
         }
         if (rightChild < getSize()){
             if (persons[rightChild].getIdade() > persons[leftChild].getIdade()){
-               childIndex = rightChild;
+                childIndex = rightChild;
             }
         }
 
@@ -100,10 +102,6 @@ public class FilaBanco {
             persons[childIndex] = tmp;
             heapifyDown(childIndex);
         }
-
-
-
-
     }
 
     public Person peek() {
