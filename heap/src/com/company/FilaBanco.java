@@ -1,15 +1,8 @@
 package com.company;
-import com.company.Person;
-import com.sun.jdi.event.Event;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.util.Arrays;
-import java.util.EventListener;
-import java.util.Observable;
-import java.util.Observer;
 
-public class FilaBanco implements PropertyChangeListener {
+public class FilaBanco {
 
     private Person[] persons;
 
@@ -32,7 +25,6 @@ public class FilaBanco implements PropertyChangeListener {
 
     public void addPerson(String people, int age) {
         Person person = new Person(people, age);
-        person.addPropertyChangeListener(this);
         addPerson(new Person(people, age));
     }
 
@@ -116,10 +108,5 @@ public class FilaBanco implements PropertyChangeListener {
             return null;
         }
         return persons[0];
-    }
-
-    @Override
-    public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
-
     }
 }
