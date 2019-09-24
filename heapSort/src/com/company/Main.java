@@ -16,7 +16,9 @@ public class Main {
     Sorter sort = new Sorter();
     sort.heapSort(numeros);
 
-
+    for (int i = 0; i < 20; i++){
+        System.out.println(numeros[i]+" ");
+    }
 
     }
 }
