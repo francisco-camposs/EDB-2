@@ -1,9 +1,15 @@
 package com.company;
 import com.company.Person;
+import com.sun.jdi.event.Event;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.util.Arrays;
+import java.util.EventListener;
+import java.util.Observable;
+import java.util.Observer;
 
-public class FilaBanco {
+public class FilaBanco implements PropertyChangeListener {
 
     private Person[] persons;
 
@@ -12,6 +18,7 @@ public class FilaBanco {
 
     // Max number of elements.
     private int capacity;
+
 
     public FilaBanco() {
         this(10);
@@ -23,18 +30,18 @@ public class FilaBanco {
         persons = new Person[capacity];
     }
 
-
-
     public void addPerson(String people, int age) {
+        Person person = new Person(people, age);
+        person.addPropertyChangeListener(this);
         addPerson(new Person(people, age));
     }
 
     public void addPerson(Person people){
         this.ensureCapacity();
         this.persons[getSize()] = people;
+        System.out.println("Aqui");
         heapifyUp(getSize());
-        size++;
-
+        size+= 1;
     }
 
     private void heapifyUp(int index){
@@ -109,5 +116,10 @@ public class FilaBanco {
             return null;
         }
         return persons[0];
+    }
+
+    @Override
+    public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
+
     }
 }

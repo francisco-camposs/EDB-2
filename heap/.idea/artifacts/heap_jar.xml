@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="heap:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/heap_jar</output-path>
+    <root id="archive" name="heap.jar">
+      <element id="module-output" name="heap" />
+      <element id="library" level="module" name="JUnit5.4" module-name="heap" />
+      <element id="library" level="module" name="JUnit4" module-name="heap" />
+    </root>
+  </artifact>
+</component>
