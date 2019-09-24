@@ -44,6 +44,10 @@ public class Person{
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Name: " + name + "\nIdade: " + age + "\n";
+    }
 }
 
 

@@ -83,12 +83,15 @@ public class FilaBanco {
         int rightChild = index * 2 + 2;
 
         int childIndex = -1;
+
         if (leftChild < getSize()){
             childIndex = leftChild;
         }
+
         if (childIndex < 0){
             return;
         }
+
         if (rightChild < getSize()){
             if (persons[rightChild].getIdade() > persons[leftChild].getIdade()){
                 childIndex = rightChild;
@@ -108,5 +111,38 @@ public class FilaBanco {
             return null;
         }
         return persons[0];
+    }
+
+    public Person[] heapSort(){
+        FilaBanco fila = new FilaBanco();
+        fila.persons = Arrays.copyOfRange(this.persons, 0, this.size);
+        fila.size = size;
+        fila.capacity = capacity;
+        return fila.heap();
+    }
+
+
+    private Person[] heap(){
+        if (size != 1){
+            Person aux;
+            aux = persons[getSize() - 1];
+            persons[getSize() - 1] = persons[0];
+            persons[0] = aux;
+            size--;
+            heapifyDown(0);
+            return heap();
+        } else {
+            return persons;
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        String finall = "";
+        for (Person value: persons) {
+            finall = finall + value.toString();
+        }
+        return finall;
     }
 }

@@ -8,6 +8,11 @@ public class Main {
         fila.addPerson("Sicrano",10);
         fila.addPerson("Beltrano",64);
         fila.addPerson("Entrano",50);
+
+        for (Person value: fila.heapSort()) {
+            System.out.println(value.toString());
+        }
+
         while (fila.getSize() != 0){
             Person p = fila.peek();
             System.out.println(p.getNome() + " está sendo atendido.");
