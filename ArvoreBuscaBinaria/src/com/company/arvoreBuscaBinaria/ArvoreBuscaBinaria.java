@@ -207,7 +207,6 @@ public class ArvoreBuscaBinaria {
         } else {
             ArvoreBuscaBinaria tree = new ArvoreBuscaBinaria(root);
             tree.removeRoot();
-            tree.viewTree();
             if (Father.left == root){
                 Father.left = tree.root;
             } if (Father.right == root){
@@ -236,5 +235,9 @@ public class ArvoreBuscaBinaria {
                 return;
             }
         }
+    }
+
+    public Node getRoot(){
+        return root;
     }
 }

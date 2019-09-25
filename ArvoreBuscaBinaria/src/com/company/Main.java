@@ -16,7 +16,7 @@ public class Main {
 
         tree.insert(50);
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 15; i++){
             tree.insert(Math.abs(rand.nextInt())%100);
         }
 
@@ -25,6 +25,5 @@ public class Main {
         tree.remove(50);
         System.out.println("");
         tree.viewTree();
-
     }
 }
