@@ -53,7 +53,7 @@ public class ArvoreBuscaBinaria {
             if (left != null){
                 left.viewAllNode();
             }
-            System.out.print("Value: "+value);
+            System.out.print("Value: "+value+" ");
             if (right != null){
                 right.viewAllNode();
             }
