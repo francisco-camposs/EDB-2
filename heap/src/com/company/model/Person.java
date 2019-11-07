@@ -1,4 +1,4 @@
-package com.company;
+package com.company.model;
 
 //https://www.baeldung.com/java-observer-pattern
 

@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.model.FilaBanco;
+import com.company.model.Person;
+
 public class Main {
 
     public static void main(String[] args) {

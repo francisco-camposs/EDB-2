@@ -1,4 +1,4 @@
-package com.company;
+package com.company.model;
 
 import java.util.Arrays;
 
@@ -58,7 +58,6 @@ public class FilaBanco {
     private int getParentIndex(int index){
         return (int) Math.floor((index -1) / 2);
     }
-
 
     private void ensureCapacity() {
         if (getSize() == capacity){
@@ -121,7 +120,6 @@ public class FilaBanco {
         return fila.heap();
     }
 
-
     private Person[] heap(){
         if (size != 1){
             Person aux;
@@ -135,7 +133,6 @@ public class FilaBanco {
             return persons;
         }
     }
-
 
     @Override
     public String toString() {

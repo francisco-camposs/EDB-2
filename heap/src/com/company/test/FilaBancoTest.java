@@ -1,12 +1,10 @@
 package com.company.test;
 
-import com.company.FilaBanco;
-import com.company.Person;
+import com.company.model.FilaBanco;
+import com.company.model.Person;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 
-import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
