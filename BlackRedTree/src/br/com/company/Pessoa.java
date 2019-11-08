@@ -12,7 +12,18 @@ public class Pessoa implements Comparable{
 
     @Override
     public int compareTo(Object o) {
-        return idade - ((Pessoa)o).idade;
+        int valor = 0;
+        try {
+             Pessoa person = ((Pessoa)o);
+        } catch (ClassCastException ex){
+            System.out.println("Fodeu");
+            return 0;
+        }
+        return idade - valor;
+    }
+
+    public int compareTo(Pessoa o) {
+        return idade - o.idade;
     }
 
     @Override

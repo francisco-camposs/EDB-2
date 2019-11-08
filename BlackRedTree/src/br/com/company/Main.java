@@ -16,6 +16,8 @@ public class Main {
         pessoa.insert(new Pessoa(7, "Lee"));
         pessoa.insert(new Pessoa(9, "Mai"));
 
+        pessoa.delete(new Pessoa(13, "Pedro"));
+
         pessoa.printAll();
 
     }
